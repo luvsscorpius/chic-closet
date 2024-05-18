@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/luvsscorpius/chic-closet/compare/v1.1.0...v1.2.0) (2024-05-18)
+
+
+### Features
+
+* **shop/product:** creating new pages ([e55b6d8](https://github.com/luvsscorpius/chic-closet/commit/e55b6d8935a1a9d3ff28c0c23859182196e43d2d))
+* **shop/product:** creating new pages ([c311de2](https://github.com/luvsscorpius/chic-closet/commit/c311de233d99d64d8e5334a4f722865b3a1c233d))
+
 # [1.1.0](https://github.com/luvsscorpius/chic-closet/compare/v1.0.0...v1.1.0) (2024-05-17)
 
 
