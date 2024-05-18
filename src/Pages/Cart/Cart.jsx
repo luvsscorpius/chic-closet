@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import * as C from './Styles'
+import { ShopContext } from '../../Context/ShopContext'
+import { CartItem } from './CartItem'
 
-export const Cart = () => {
+export const Cart = (props) => {
+
   return (
     <C.Cart>
         <div>
@@ -9,7 +12,6 @@ export const Cart = () => {
         </div>
 
         <C.CartItems>
-
         </C.CartItems>
 
         <C.Checkout>

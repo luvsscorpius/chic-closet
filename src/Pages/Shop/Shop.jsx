@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import * as S from './Styles'
 import { Product } from './Product'
 import axios from 'axios'
+import { ShopContextProvider } from '../../Context/ShopContext'
 
 export const Shop = () => {
     // State para guardar os produtos
@@ -21,6 +22,7 @@ export const Shop = () => {
     }, [])
 
   return (
+    <ShopContextProvider products={products}>
     <S.Shop>
         <S.ShopTitle>
             <S.H1>Shop</S.H1>
@@ -33,5 +35,6 @@ export const Shop = () => {
             ))}
         </S.Products>
     </S.Shop>
+    </ShopContextProvider>
   )
 }
