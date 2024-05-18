@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/luvsscorpius/chic-closet/compare/v1.2.0...v1.3.0) (2024-05-18)
+
+
+### Features
+
+* **cart:** creating new page cart ([4ef8c33](https://github.com/luvsscorpius/chic-closet/commit/4ef8c337ba4d4bc3cac8780007a0dbcc2af4e74c))
+* **context:** creating context to access states from different pages and correcting addToCart funct ([ea1b13c](https://github.com/luvsscorpius/chic-closet/commit/ea1b13c8cc8ca33a11b4469bfde09cbd5874f4fa))
+
 # [1.2.0](https://github.com/luvsscorpius/chic-closet/compare/v1.1.0...v1.2.0) (2024-05-18)
 
 
