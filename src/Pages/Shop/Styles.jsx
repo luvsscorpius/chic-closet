@@ -34,16 +34,29 @@ export const Products = styled.div`
 export const Product = styled.div`
     border-radius: 15px;
     width: 300px;
-    height: 350px;
-    margin: 100px;
+    height: 450px;
+    margin: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+
+    @media (max-width: 700px){
+        width: 90%;
+        margin:0;
+        height: 400px;
+        gap: 10px;
+    }
 `
 
 export const img = styled.img`
     width: 200px;
+
+    @media (max-width: 700px) {
+        width: 150px;
+    }
 `
 
 export const description = styled.div`
