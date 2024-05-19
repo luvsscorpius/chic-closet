@@ -53,7 +53,20 @@ export const ShopContextProvider = (props) => {
         })
     }
 
-    const contextValue = { cartItems, addToCart, products, removeFromCart };
+    // Funcao para conseguir o total do carrinho
+    const getTotalAmount = () => {
+        let totalAmount = 0
+        for (const item in cartItems) {
+            if (cartItems[item] > 0) {
+                let itemInfo = products.find((product) => product.id === Number(item))
+                totalAmount += cartItems[item] * itemInfo.price
+            }
+        }
+
+        return totalAmount
+    }
+
+    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount };
     console.log(cartItems);
 
     return (
