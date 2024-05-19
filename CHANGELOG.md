@@ -1,3 +1,19 @@
+# [1.4.0](https://github.com/luvsscorpius/chic-closet/compare/v1.3.1...v1.4.0) (2024-05-19)
+
+
+### Bug Fixes
+
+* **totalamount:** it wouldnt find the price when the page was reloaded, so added the if ([85da7f1](https://github.com/luvsscorpius/chic-closet/commit/85da7f12de53ca91873232c39059a3db038a926d))
+
+
+### Features
+
+* **cartitem:** creating buttons to add or remove items from cart ([51042e9](https://github.com/luvsscorpius/chic-closet/commit/51042e92e27276c67b2ec65c7d2e52d750cee501))
+* **cart:** only showing the cart if there is something inside ([4a212d6](https://github.com/luvsscorpius/chic-closet/commit/4a212d6404bc140c895a407c81a5013d3a0dc73b))
+* **context:** creating a function to remove items from the cart on the context ([da39c01](https://github.com/luvsscorpius/chic-closet/commit/da39c0127225b3a4e47b88148ce46431492f084b))
+* **navigate:** using useNavigate to navigate clients back to shop when clicked on button ([517fa10](https://github.com/luvsscorpius/chic-closet/commit/517fa10efeb5bb17dfbeca1503188c696504180a))
+* **totalamount:** creating a new function to calculate the total amount of the cart ([a3ee62f](https://github.com/luvsscorpius/chic-closet/commit/a3ee62fe4387d32aa9b1a67224f6149ff03b17c3))
+
 ## [1.3.1](https://github.com/luvsscorpius/chic-closet/compare/v1.3.0...v1.3.1) (2024-05-19)
 
 
