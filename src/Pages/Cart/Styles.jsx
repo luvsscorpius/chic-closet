@@ -25,3 +25,10 @@ export const Checkout = styled.div`
         cursor: pointer;
     }
 `
+
+// CartItem.jsx
+
+export const cartItem = styled.div`
+
+
+`

@@ -1,9 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
 
-export const Cart = (props) => {
+export const Cart = () => {
+    const {cartItems, products} = useContext(ShopContext)
+    console.log(cartItems)
 
   return (
     <C.Cart>
@@ -12,6 +14,12 @@ export const Cart = (props) => {
         </div>
 
         <C.CartItems>
+          {products.map((product) => {
+            if (cartItems[product.id] > 0) {
+              console.log(products)
+              return <CartItem key={product.id} data={product} />
+            }
+          })}
         </C.CartItems>
 
         <C.Checkout>
