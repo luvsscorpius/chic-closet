@@ -70,5 +70,39 @@ export const description = styled.div`
 `
 
 export const countHandler = styled.div`
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
+    &:hover {
+        background-color: #555;
+    }
+
+    &:active {
+        background-color: #333;
+        transform: scale(0.95);
+    }
+    }
+
+    input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0 5px;
+    }
+
+    @media (max-width: 700px) {
+        input {
+            width: 30px;
+            margin: 0px;
+        }
+    }
 `
