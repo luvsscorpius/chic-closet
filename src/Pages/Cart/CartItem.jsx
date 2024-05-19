@@ -13,6 +13,12 @@ export const CartItem = (props) => {
             <C.description>
                 <p><b>{title}</b></p>
                 <p>R${price}</p>
+
+                <C.countHandler>
+                    <button>-</button>
+                    <input value={cartItems[id]} />
+                    <button onClick={() => addToCart(id)}>+</button>
+                </C.countHandler>
             </C.description>
         </C.cartItem>
     );
