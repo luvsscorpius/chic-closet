@@ -9,10 +9,11 @@ export const CartItem = (props) => {
     return (
         <C.cartItem>
             <img src={image} alt={title} />
-            <div>
-                <h3>{title}</h3>
-                <p>Price: ${price}</p>
-            </div>
+
+            <C.description>
+                <p><b>{title}</b></p>
+                <p>R${price}</p>
+            </C.description>
         </C.cartItem>
     );
 };
