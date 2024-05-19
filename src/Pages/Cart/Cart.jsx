@@ -22,6 +22,7 @@ export const Cart = () => {
           })}
         </C.CartItems>
 
+        {totalAmount > 0 ? 
         <C.Checkout>
           <C.subtotal>
             <h3>Subtotal: R${totalAmount}</h3>
@@ -32,6 +33,7 @@ export const Cart = () => {
             <button>Checkout</button>
           </C.buttons>
         </C.Checkout>
+        : <h2>Your Cart is Empty</h2> }
     </C.Cart>
   )
 }
