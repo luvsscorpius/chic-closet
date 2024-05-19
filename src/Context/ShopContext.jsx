@@ -46,7 +46,14 @@ export const ShopContextProvider = (props) => {
         });
     };
 
-    const contextValue = { cartItems, addToCart, products };
+    // Funçao para remover do carrinho
+    const removeFromCart = (itemId) => {
+        setCartItems((prev) => {
+            return {...prev, [itemId]: prev[itemId] - 1}
+        })
+    }
+
+    const contextValue = { cartItems, addToCart, products, removeFromCart };
     console.log(cartItems);
 
     return (
