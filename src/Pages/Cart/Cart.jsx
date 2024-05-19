@@ -2,10 +2,13 @@ import React, { useContext, useState, useEffect } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
+import { useNavigate } from 'react-router-dom'
 
 export const Cart = () => {
     const {cartItems, products, getTotalAmount} = useContext(ShopContext)
     const totalAmount = getTotalAmount()
+
+    const navigate = useNavigate()
 
   return (
     <C.Cart>
@@ -29,7 +32,7 @@ export const Cart = () => {
           </C.subtotal>
 
           <C.buttons>
-            <button>Continue Shopping</button>
+            <button onClick={() => navigate('/')}>Continue Shopping</button>
             <button>Checkout</button>
           </C.buttons>
         </C.Checkout>
