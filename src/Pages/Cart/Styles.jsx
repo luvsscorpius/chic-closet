@@ -14,6 +14,15 @@ export const Cart = styled.div`
 export const CartItems = styled.div``
 
 export const Checkout = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+`
+
+export const buttons = styled.div`
+    display: flex;
+    justify-content: center;
+
     button {
         width: 150px;
         height: 56px;
@@ -23,6 +32,25 @@ export const Checkout = styled.div`
         border-radius: 8px;
         margin: 10px;
         cursor: pointer;
+    }
+`
+
+
+export const subtotal = styled.div`
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0px;
+
+    h3 {
+        margin: 20px;
+    }
+
+    @media (max-width: 700px) {
+        width: 100%;
     }
 `
 

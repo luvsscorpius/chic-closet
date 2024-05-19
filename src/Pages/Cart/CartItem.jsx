@@ -16,7 +16,7 @@ export const CartItem = (props) => {
 
                 <C.countHandler>
                     <button onClick={() => removeFromCart(id)}>-</button>
-                    <input value={cartItems[id]} />
+                    <input value={cartItems[id]} readOnly />
                     <button onClick={() => addToCart(id)}>+</button>
                 </C.countHandler>
             </C.description>

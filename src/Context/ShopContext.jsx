@@ -59,10 +59,12 @@ export const ShopContextProvider = (props) => {
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
                 let itemInfo = products.find((product) => product.id === Number(item))
-                totalAmount += cartItems[item] * itemInfo.price
+                // Colocando esse if ajuda a tirar o bug de nao achar o preco, por isso o if se realmente achar o itemInfo ele adicionara o preco
+                 if (itemInfo) {
+                    totalAmount += cartItems[item] * itemInfo.price
+                 }
             }
         }
-
         return totalAmount
     }
 
