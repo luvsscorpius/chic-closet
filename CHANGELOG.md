@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/luvsscorpius/chic-closet/compare/v1.3.0...v1.3.1) (2024-05-19)
+
+
+### Bug Fixes
+
+* **cart:** fixing cart that wouldnt show on /cart ([ccfece2](https://github.com/luvsscorpius/chic-closet/commit/ccfece289f042b9e105b4c190ad60e1dbc975627))
+
 # [1.3.0](https://github.com/luvsscorpius/chic-closet/compare/v1.2.0...v1.3.0) (2024-05-18)
 
 
