@@ -3,6 +3,6 @@ import * as F from './Styles'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <F.Footer>Footer</F.Footer>
   )
 }
