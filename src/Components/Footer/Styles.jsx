@@ -21,6 +21,6 @@ export const Links = styled.div`
         text-decoration: none;
         color: rgba(255, 255, 255, 1);
         margin-left: 20px;
-        font-size: 25px;
+        font-size: 20px;
     }
 `
