@@ -4,6 +4,7 @@ import { NavBar } from "./Components/NavBar/NavBar";
 import {GlobalStyle} from './Components/NavBar/Styles'
 import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Shop/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </Router>
   );
 }
