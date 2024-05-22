@@ -3,6 +3,7 @@ import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
 import { useNavigate } from 'react-router-dom'
+import { EmptyCart } from '../../Components/EmptyCart/EmptyCart'
 
 export const Cart = () => {
     const {cartItems, products, getTotalAmount} = useContext(ShopContext)
@@ -36,7 +37,7 @@ export const Cart = () => {
             <button>Checkout</button>
           </C.buttons>
         </C.Checkout>
-        : <h2>Your Cart is Empty</h2> }
+        : <EmptyCart/> }
     </C.Cart>
   )
 }

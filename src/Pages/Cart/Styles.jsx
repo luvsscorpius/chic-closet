@@ -7,7 +7,7 @@ export const Cart = styled.div`
     min-height: 100vh;
 
     h1 {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 `
 
