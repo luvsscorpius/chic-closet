@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/luvsscorpius/chic-closet/compare/v1.6.2...v1.7.0) (2024-05-24)
+
+
+### Features
+
+* **hashrouter:** hashRoute ([68fd08b](https://github.com/luvsscorpius/chic-closet/commit/68fd08bd775457e952ea00c5505c8f1bb4a3a309))
+
 ## [1.6.2](https://github.com/luvsscorpius/chic-closet/compare/v1.6.1...v1.6.2) (2024-05-24)
 
 
