@@ -7,9 +7,9 @@ import { HashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ShopContextProvider>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
   </ShopContextProvider>
 );
 
