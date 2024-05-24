@@ -33,7 +33,7 @@ export const Cart = () => {
           </C.subtotal>
 
           <C.buttons>
-            <button onClick={() => navigate('/')}>Continue Shopping</button>
+            <button onClick={() => navigate('https://luvsscorpius.github.io/chic-closet/')}>Continue Shopping</button>
             <button>Checkout</button>
           </C.buttons>
         </C.Checkout>
