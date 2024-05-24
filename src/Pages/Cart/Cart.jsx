@@ -19,8 +19,8 @@ export const Cart = () => {
 
         <C.CartItems>
           {products.map((product) => {
+            console.log(cartItems)
             if (cartItems[product.id] > 0) {
-              console.log(products)
               return <CartItem key={product.id} data={product} />
             }
           })}

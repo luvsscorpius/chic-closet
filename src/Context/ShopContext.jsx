@@ -41,9 +41,10 @@ export const ShopContextProvider = (props) => {
 
     // Função para adicionar ao carrinho
     const addToCart = (itemId) => {
-        console.log(itemId)
         setCartItems((prev) => {
-                return { ...prev, [itemId]: prev[Number(itemId)] + 1 };
+            // Verificando se a contagem comeca com 0 para nao dar problema de comecar com null e NaN
+                const currentCount = prev[itemId] || 0
+                return { ...prev, [itemId]: currentCount + 1 };
         });
     };
 
