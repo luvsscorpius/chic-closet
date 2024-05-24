@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/luvsscorpius/chic-closet/compare/v1.6.1...v1.6.2) (2024-05-24)
+
+
+### Bug Fixes
+
+* **routes:** fixing routes ([488b831](https://github.com/luvsscorpius/chic-closet/commit/488b83158ed811fe5f01c109b27b14c13b8def39))
+
 ## [1.6.1](https://github.com/luvsscorpius/chic-closet/compare/v1.6.0...v1.6.1) (2024-05-24)
 
 
