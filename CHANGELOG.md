@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/luvsscorpius/chic-closet/compare/v1.5.0...v1.6.0) (2024-05-24)
+
+
+### Features
+
+* **gh pages:** gh pages ([f750a27](https://github.com/luvsscorpius/chic-closet/commit/f750a27bee23c90376e294463f1ffb7133afd522))
+
 # [1.5.0](https://github.com/luvsscorpius/chic-closet/compare/v1.4.0...v1.5.0) (2024-05-22)
 
 
