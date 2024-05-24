@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/%7Bchic-closet%7D/static/js/main.d66c4aab.js",
-    "static/media/emptyCart.png": "/%7Bchic-closet%7D/static/media/emptyCart.d4d2c49cdfe953211e7b.png",
-    "index.html": "/%7Bchic-closet%7D/index.html",
-    "main.d66c4aab.js.map": "/%7Bchic-closet%7D/static/js/main.d66c4aab.js.map"
+    "main.js": "/chic-closet/static/js/main.dc70d709.js",
+    "static/media/emptyCart.png": "/chic-closet/static/media/emptyCart.d4d2c49cdfe953211e7b.png",
+    "index.html": "/chic-closet/index.html",
+    "main.dc70d709.js.map": "/chic-closet/static/js/main.dc70d709.js.map"
   },
   "entrypoints": [
-    "static/js/main.d66c4aab.js"
+    "static/js/main.dc70d709.js"
   ]
 }
