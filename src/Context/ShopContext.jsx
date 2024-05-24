@@ -41,8 +41,9 @@ export const ShopContextProvider = (props) => {
 
     // Função para adicionar ao carrinho
     const addToCart = (itemId) => {
+        console.log(itemId)
         setCartItems((prev) => {
-                return { ...prev, [itemId]: prev[itemId] + 1 };
+                return { ...prev, [itemId]: prev[Number(itemId)] + 1 };
         });
     };
 
