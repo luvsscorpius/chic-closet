@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/luvsscorpius/chic-closet/compare/v1.4.0...v1.5.0) (2024-05-22)
+
+
+### Bug Fixes
+
+* **cart:** changing the logic to show products on the cart ([4d8b79f](https://github.com/luvsscorpius/chic-closet/commit/4d8b79f80936d6482e8a671a20e601ebd65a5fba))
+
+
+### Features
+
+* **emptycart:** creating a component that will show when the cart is empty ([dd55bfd](https://github.com/luvsscorpius/chic-closet/commit/dd55bfd8b0fd404d8abbcddeefca95040dffbcd6))
+* **emptycart:** modifying last things on emptycart component ([d52fe61](https://github.com/luvsscorpius/chic-closet/commit/d52fe61b49ab3a73506c0e4ed4bda348676c0dee))
+* **footer:** creating a footer component ([ea1d613](https://github.com/luvsscorpius/chic-closet/commit/ea1d6134883d9f63f8fb22700700cac54ea2cec9))
+
 # [1.4.0](https://github.com/luvsscorpius/chic-closet/compare/v1.3.1...v1.4.0) (2024-05-19)
 
 

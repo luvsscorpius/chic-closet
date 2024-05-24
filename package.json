@@ -1,7 +1,7 @@
 {
   "homepage": "http://{luvsscorpius}.github.io/{chic-closet}",
   "name": "chic-closet",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
