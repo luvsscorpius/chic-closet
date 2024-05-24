@@ -1,3 +1,12 @@
+## [1.7.2](https://github.com/luvsscorpius/chic-closet/compare/v1.7.1...v1.7.2) (2024-05-24)
+
+
+### Bug Fixes
+
+* **fix:** fix ([7a1fd7e](https://github.com/luvsscorpius/chic-closet/commit/7a1fd7e46977d286ef57e90aa7c98dbe88c2351a))
+* **null & nan shop:** when clicking to add the product the first time wouldnt show the quantity ([3651ee1](https://github.com/luvsscorpius/chic-closet/commit/3651ee18acffa2cb3a16e2cca0c6d113f789dd24))
+* **shopcontext:** transforming id into a number when clicked to add to cart ([5493f97](https://github.com/luvsscorpius/chic-closet/commit/5493f972f5fd84685ea0b7235aa0de116ed5f2e7))
+
 ## [1.7.1](https://github.com/luvsscorpius/chic-closet/compare/v1.7.0...v1.7.1) (2024-05-24)
 
 
