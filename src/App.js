@@ -5,6 +5,7 @@ import {GlobalStyle} from './Components/NavBar/Styles'
 import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
+import { ShopContextProvider } from './Context/ShopContext';
 
 function App() {
   return (

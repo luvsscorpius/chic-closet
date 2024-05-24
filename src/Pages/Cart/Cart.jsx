@@ -6,8 +6,10 @@ import { useNavigate } from 'react-router-dom'
 import { EmptyCart } from '../../Components/EmptyCart/EmptyCart'
 
 export const Cart = () => {
-    const {cartItems, products, getTotalAmount} = useContext(ShopContext)
+    const {cartItems, products, getTotalAmount, setCartItems} = useContext(ShopContext)
+
     const totalAmount = getTotalAmount()
+    console.log(cartItems)
 
     const navigate = useNavigate()
 
@@ -19,7 +21,6 @@ export const Cart = () => {
 
         <C.CartItems>
           {products.map((product) => {
-            console.log(cartItems)
             if (cartItems[product.id] > 0) {
               return <CartItem key={product.id} data={product} />
             }

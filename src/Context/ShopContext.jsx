@@ -70,7 +70,7 @@ export const ShopContextProvider = (props) => {
         return totalAmount
     }
 
-    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount };
+    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, setCartItems };
     console.log(cartItems);
 
     return (
