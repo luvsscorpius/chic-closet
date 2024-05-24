@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/luvsscorpius/chic-closet/compare/v1.7.0...v1.7.1) (2024-05-24)
+
+
+### Bug Fixes
+
+* **hashrouter:** hashrouter ([cb991d3](https://github.com/luvsscorpius/chic-closet/commit/cb991d3306c8a63cd44c1fd94b376896f035f012))
+
 # [1.7.0](https://github.com/luvsscorpius/chic-closet/compare/v1.6.2...v1.7.0) (2024-05-24)
 
 
