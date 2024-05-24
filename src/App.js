@@ -12,8 +12,8 @@ function App() {
       <GlobalStyle/> {/* Resetando o css */}
       <NavBar/>
       <Routes>
-        <Route path="https://luvsscorpius.github.io/chic-closet/" element={<Shop/>}/>
-        <Route path="https://luvsscorpius.github.io/cart" element={<Cart/>}/>
+        <Route path="/" element={<Shop/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
       <Footer/>
     </Router>
