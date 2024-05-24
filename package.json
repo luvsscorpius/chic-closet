@@ -1,4 +1,5 @@
 {
+  "homepage": "http://{luvsscorpius}.github.io/{chic-closet}",
   "name": "chic-closet",
   "version": "1.4.0",
   "private": true,
@@ -17,6 +18,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build" ,
+    "deploy": "gh-pages -d build" ,
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,6 +49,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "cz-conventional-changelog": "^3.3.0",
+    "gh-pages": "^6.1.1",
     "semantic-release": "^23.1.1"
   },
   "author": "",
