@@ -8,19 +8,17 @@ export const Footer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
     bottom: 0; /* Fixa o rodapé no final da página */
 `
 
 export const Links = styled.div`
-    margin-right: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     a {
         text-decoration: none;
         color: rgba(255, 255, 255, 1);
-        margin-left: 20px;
         font-size: 20px;
     }
 `
