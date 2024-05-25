@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
@@ -6,10 +6,8 @@ import { useNavigate } from 'react-router-dom'
 import { EmptyCart } from '../../Components/EmptyCart/EmptyCart'
 
 export const Cart = () => {
-    const {cartItems, products, getTotalAmount, setCartItems} = useContext(ShopContext)
-
+    const {products, getTotalAmount, cartItems} = useContext(ShopContext)
     const totalAmount = getTotalAmount()
-    console.log(cartItems)
 
     const navigate = useNavigate()
 
@@ -20,11 +18,13 @@ export const Cart = () => {
         </div>
 
         <C.CartItems>
-          {products.map((product) => {
-            if (cartItems[product.id] > 0) {
-              return <CartItem key={product.id} data={product} />
-            }
-          })}
+        {products.map((product) => {
+          if (cartItems[product.id] > 0) {
+            return <CartItem key={product.id} data={product} />;
+          }
+            return null; 
+})}
+
         </C.CartItems>
 
         {totalAmount > 0 ? 

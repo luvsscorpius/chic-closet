@@ -5,18 +5,20 @@ import {GlobalStyle} from './Components/NavBar/Styles'
 import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
-import { ShopContextProvider } from './Context/ShopContext';
+import { ShopContextProvider } from "./Context/ShopContext";
 
 function App() {
   return (
     <Router>
-      <GlobalStyle/> {/* Resetando o css */}
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Shop/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-      </Routes>
-      <Footer/>
+      <ShopContextProvider>
+        <GlobalStyle/> {/* Resetando o css */}
+        <NavBar/>
+          <Routes>
+            <Route path="/" element={<Shop/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+          </Routes>
+        <Footer/>
+      </ShopContextProvider>
     </Router>
   );
 }

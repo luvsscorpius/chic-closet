@@ -9,7 +9,7 @@ export const Product = (props) => {
     const {cartItems, addToCart} = useContext(ShopContext)
 
     // Mostrar a quantidade de itens no carrinho
-    const cartItemAmount = cartItems
+    const cartItemAmount = cartItems[id]
 
   return (
     <P.Product>
@@ -22,7 +22,7 @@ export const Product = (props) => {
 
         <P.button onClick={() => addToCart(id)}>
           {/* Aqui usamos o cartItemAmount[id] para saber se era maior que 0, se sim mostrariamos a quantidade de items no carrinho ate o momento */}
-           Add To Cart {cartItemAmount[id] > 0 ? `(${cartItemAmount[id]})` : ''}
+           Add To Cart {cartItemAmount > 0 ? `(${cartItemAmount})` : ''}
         </P.button>
     </P.Product>
   )

@@ -1,7 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext} from 'react'
 import * as S from './Styles'
 import { Product } from './Product'
-import axios from 'axios'
 import { ShopContext, ShopContextProvider } from '../../Context/ShopContext'
 
 export const Shop = () => {

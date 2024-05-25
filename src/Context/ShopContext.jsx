@@ -1,16 +1,8 @@
-import React, { createContext, useState, useEffect, useReducer } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Isso irá rastrear todas as funções e states da nossa aplicação, por exemplo, um state que pode ser acessado de páginas como shop e cart
 export const ShopContext = createContext(null);
-
-const getDefaultCart = (products) => {
-    let cart = {};
-    products.forEach(product => {
-        cart[product.id] = 0;
-    });
-    return cart;
-};
 
 export const ShopContextProvider = (props) => {
     // State para guardar os produtos
@@ -72,6 +64,7 @@ export const ShopContextProvider = (props) => {
 
     const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, setCartItems };
     console.log(cartItems);
+    console.log(contextValue.getTotalAmount())
 
     return (
         <ShopContext.Provider value={contextValue}>
