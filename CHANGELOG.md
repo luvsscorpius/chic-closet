@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/luvsscorpius/chic-closet/compare/v1.7.2...v1.7.3) (2024-05-25)
+
+
+### Bug Fixes
+
+* **cart:** fixing cart ([ab475de](https://github.com/luvsscorpius/chic-closet/commit/ab475de18ee80bff795b931370b2e132750f8a0c))
+
 ## [1.7.2](https://github.com/luvsscorpius/chic-closet/compare/v1.7.1...v1.7.2) (2024-05-24)
 
 
