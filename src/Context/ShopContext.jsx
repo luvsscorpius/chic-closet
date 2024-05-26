@@ -14,6 +14,12 @@ export const ShopContextProvider = (props) => {
         return savedCartItems ? JSON.parse(savedCartItems) : {};
     });
 
+    // Usando o useEffect para montar o carrinho com base no localStorage
+    useEffect(() => {
+    // Aqui adicionamos o carrinho ao localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
+
     useEffect(() => {
         // Usamos o axios para buscar os dados na API
         axios.get("https://fakestoreapi.com/products/category/women's clothing")
@@ -24,12 +30,6 @@ export const ShopContextProvider = (props) => {
             // Caso contrário, ele retornará o porquê deu errado
             .catch(error => console.error('Error fetching products', error));
     }, []);
-
-    // Usando o useEffect para montar o carrinho com base no localStorage
-    useEffect(() => {
-        // Aqui adicionamos o carrinho ao localStorage
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }, [cartItems]);
 
     // Função para adicionar ao carrinho
     const addToCart = (itemId) => {
@@ -62,9 +62,7 @@ export const ShopContextProvider = (props) => {
         return totalAmount
     }
 
-    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, setCartItems };
-    console.log(cartItems);
-    console.log(contextValue.getTotalAmount())
+    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount };
 
     return (
         <ShopContext.Provider value={contextValue}>
