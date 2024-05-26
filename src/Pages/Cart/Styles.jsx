@@ -12,7 +12,9 @@ export const Cart = styled.div`
     }
 `
 
-export const CartItems = styled.div``
+export const CartItems = styled.div`
+    width: 100%;
+`
 
 export const Checkout = styled.div`
     display: flex;
@@ -68,17 +70,17 @@ export const subtotal = styled.div`
 // CartItem.jsx
 
 export const cartItem = styled.div`
-    width: 600px;
-    height: 320px;
+    width: 98%;
+    height: 200px;
     display: flex;
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     margin: 20px;
-    justify-content: center;
 
     img {
-        width: 150px;
+        width: 80px;
+        margin-left: 10px;
     }
 
     p {
@@ -87,26 +89,57 @@ export const cartItem = styled.div`
 
     @media (max-width: 700px) {
         width: 90vw;
-        height: 350px;
+        height: 200px;
         margin-top: 10px;
+
+        img {
+            width: 100px;
+        }
+
+        p {
+            font-size: 18px;
+        }
     }
 `
 
-export const description = styled.div`
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    font-size: 30px;
-    gap: 20px;
+export const description = styled.table`
+    width: 100%;
+    border-collapse: collapse;
     margin: 20px;
 
-    @media (max-width: 700px) {
-        width: 50%;
+    th, td {
+        padding: 8px;
+        text-align: left;
     }
 
-`
+    .produto {
+        width: 60%;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    @media (max-width: 700px) {
+        th, td {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        th {
+            display: none;
+        }
+
+        .total {
+            display: none;
+        }
+    }
+`;
+
 
 export const countHandler = styled.div`
     display: flex;
