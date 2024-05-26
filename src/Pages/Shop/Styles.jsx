@@ -21,6 +21,7 @@ export const Products = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    min-height: 100vh;
 
     @media (max-width: 700px) {
         width: 100vw;
