@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/luvsscorpius/chic-closet/compare/v1.7.4...v1.8.0) (2024-05-26)
+
+
+### Features
+
+* **cart:** creating new divs to show the resume of the cart, total, discount etc ([4c8e733](https://github.com/luvsscorpius/chic-closet/commit/4c8e7332a2cc41c3387bd68b887aa07eab62c835))
+
 ## [1.7.4](https://github.com/luvsscorpius/chic-closet/compare/v1.7.3...v1.7.4) (2024-05-26)
 
 
