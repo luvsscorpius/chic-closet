@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/luvsscorpius/chic-closet/compare/v1.7.3...v1.7.4) (2024-05-26)
+
+
+### Bug Fixes
+
+* **context:** context wouldnt update when changing the route, so we forced it to remount ([35bb0b4](https://github.com/luvsscorpius/chic-closet/commit/35bb0b423ce57326ac3bb996af1f5f97bdb64b61))
+
 ## [1.7.3](https://github.com/luvsscorpius/chic-closet/compare/v1.7.2...v1.7.3) (2024-05-25)
 
 
