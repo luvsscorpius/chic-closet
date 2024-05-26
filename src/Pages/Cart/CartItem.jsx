@@ -8,18 +8,33 @@ export const CartItem = (props) => {
     
     return (
         <C.cartItem>
-            <img src={image} alt={title} />
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center',  alignItems: 'center', marginTop: '10px', width: '200px'}}>
+                <img src={image} alt={title} />
+            </div>
 
             <C.description>
-                <p><b>{title}</b></p>
-                <p>R${price}</p>
-
-                <C.countHandler>
-                    <button onClick={() => removeFromCart(id)}>-</button>
-                    <input value={cartItems[id]} readOnly />
-                    <button onClick={() => addToCart(id)}>+</button>
-                </C.countHandler>
+                <div>
+                    <p>Produto</p>
+                    <p><b>{title}</b></p>
+                </div>
+                <div style={{width: '170px'}}>
+                    <p>Preço unid.</p>
+                    <p>R${price}</p>
+                </div>
+                <div>
+                    <p>Qtd.</p>
+                    <C.countHandler>
+                        <button onClick={() => removeFromCart(id)}>-</button>
+                        <p>{cartItems[id]}</p>
+                        <button onClick={() => addToCart(id)}>+</button>
+                    </C.countHandler>
+                </div>
+                <div>
+                    <p>Total</p>
+                    <p><b>R${price * cartItems[id]}</b></p>
+                </div>
             </C.description>
+
         </C.cartItem>
     );
 };

@@ -2,8 +2,9 @@ import React, { useContext } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { EmptyCart } from '../../Components/EmptyCart/EmptyCart'
+import { ArrowLeft } from 'phosphor-react'
 
 export const Cart = () => {
     const {products, getTotalAmount, cartItems} = useContext(ShopContext)
@@ -13,7 +14,13 @@ export const Cart = () => {
 
   return (
     <C.Cart>
-        <div>
+        <C.buttons>
+            <Link to='/' style={{textDecoration: 'none'}}>
+              <span><ArrowLeft size={20} />Continue Shopping</span>
+            </Link>
+        </C.buttons>
+
+        <div style={{display: 'flex', width: '100%'}}>
             <h1>Your Cart Items</h1>
         </div>
 
@@ -32,11 +39,6 @@ export const Cart = () => {
           <C.subtotal>
             <h3>Subtotal: R${totalAmount}</h3>
           </C.subtotal>
-
-          <C.buttons>
-            <button onClick={() => navigate('/')}>Continue Shopping</button>
-            <button>Checkout</button>
-          </C.buttons>
         </C.Checkout>
         : <EmptyCart/> }
     </C.Cart>

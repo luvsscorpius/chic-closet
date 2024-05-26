@@ -7,7 +7,8 @@ export const Cart = styled.div`
     min-height: 100vh;
 
     h1 {
-        margin-top: 20px;
+        margin-left: 30px;
+        margin-top: 10px;
     }
 `
 
@@ -21,18 +22,28 @@ export const Checkout = styled.div`
 
 export const buttons = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
 
-    button {
-        width: 150px;
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        width: 200px;
+        gap: 10px;
         height: 56px;
-        background-color: #800020;
-        color: #fff;
-        border: none; 
-        border-radius: 8px;
-        margin: 10px;
+        color: #000;
         cursor: pointer;
+
+        &:hover {
+            transition: 0.5s ease;
+            color: #FF4F00;
+        }
     }
+    
 `
 
 
@@ -58,12 +69,12 @@ export const subtotal = styled.div`
 
 export const cartItem = styled.div`
     width: 600px;
-    height: 250px;
+    height: 320px;
     display: flex;
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    margin: 30px;
+    margin: 20px;
     justify-content: center;
 
     img {
@@ -88,7 +99,7 @@ export const description = styled.div`
     justify-content: center;
     width: 50%;
     font-size: 30px;
-    gap: 30px;
+    gap: 20px;
     margin: 20px;
 
     @media (max-width: 700px) {
@@ -98,18 +109,26 @@ export const description = styled.div`
 `
 
 export const countHandler = styled.div`
-button {
-    background-color: #444;
-    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+    color: #000;
+    background-color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 8px 15px;
-    margin: 0 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: 550;
     cursor: pointer;
+    font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover {
-        background-color: #555;
+        transition: 0.5s ease;
+        color: #fff;
+        background-color: #FF4F00;
     }
 
     &:active {
