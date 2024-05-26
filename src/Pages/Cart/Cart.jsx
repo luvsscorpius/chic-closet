@@ -2,15 +2,13 @@ import React, { useContext } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { EmptyCart } from '../../Components/EmptyCart/EmptyCart'
 import { ArrowLeft } from 'phosphor-react'
 
 export const Cart = () => {
     const {products, getTotalAmount, cartItems} = useContext(ShopContext)
     const totalAmount = getTotalAmount()
-
-    const navigate = useNavigate()
 
   return (
     <C.Cart>
