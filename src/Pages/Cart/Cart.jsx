@@ -41,7 +41,7 @@ export const Cart = () => {
 
             <C.Frete>
               <p>Calcular Frete</p>
-              <input type="number" />
+              <input type="text" maxLength={8} />
             </C.Frete>
 
             <C.Desconto>
