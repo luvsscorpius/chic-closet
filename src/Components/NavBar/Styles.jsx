@@ -21,9 +21,13 @@ export const NavBar = styled.div`
     background-color: rgba(0, 0, 0, 0.8);
     color: rgba(255, 255, 255, 1);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 `
+
+export const logo = styled.div`
+  margin: 50px;
+` 
 
 export const Links = styled.div`
     margin-right: 50px;
