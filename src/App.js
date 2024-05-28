@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { NavBar } from "./Components/NavBar/NavBar";
-import {GlobalStyle} from './Components/NavBar/Styles'
+import {GlobalStyle, FadeInContainer, FadeOutContainer} from './Components/NavBar/Styles'
 import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
@@ -25,8 +25,8 @@ function App() {
       <GlobalStyle /> {/* Resetando o css */}
       <NavBar />
       <Routes>
-        <Route path="/" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
+        <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
       </Routes>
       <Footer />
     </ShopContextProvider>

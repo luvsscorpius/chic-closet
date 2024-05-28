@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 export const Shop = styled.div``
 
@@ -38,6 +38,16 @@ export const Products = styled.div`
 
 // Product style
 
+// Animações
+const containerAnimation = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`
+
 export const Product = styled.div`
     width: 300px;
     height: 350px;
@@ -51,6 +61,7 @@ export const Product = styled.div`
     cursor: pointer;
     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
     position: relative;
+    animation: ${containerAnimation} 300ms ease-in;
 
     &:hover {
         border: 1px solid #000;

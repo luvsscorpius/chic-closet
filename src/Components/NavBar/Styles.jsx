@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import {createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -41,3 +41,31 @@ export const Links = styled.div`
         font-size: 25px;
     }
 `
+
+// Transições 
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const FadeInContainer = styled.div`
+  animation: ${fadeIn} 300ms ease-in;
+`;
+
+export const FadeOutContainer = styled.div`
+  animation: ${fadeOut} 300ms ease-in;
+`;

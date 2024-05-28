@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Cart = styled.div`
     display: flex;
@@ -13,12 +13,24 @@ export const Cart = styled.div`
 `
 
 export const CartItems = styled.div`    
-    width: 100%
+    width: 100%;
+`
+
+// Animation 
+export const containerAnimation = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 `
 
 export const resume = styled.div`
     width: 100%;
     display: flex;
+    // animation: nomeDaAnimação duração tipoDeEfeito
+    animation: ${containerAnimation} 300ms ease-in;
 
     @media (max-width: 700px) {
         flex-direction: column;
