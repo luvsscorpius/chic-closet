@@ -41,7 +41,7 @@ export const Checkout = styled.div`
     display: flex;
     justify-content: start;
     flex-direction: column;
-    width: 30%;
+    width: 31%;
     border-radius: 5px;
     margin: 20px;
     height: 430px;
@@ -113,6 +113,7 @@ export const Desconto = styled.div`
         height: 35px;
         border: 1px solid #ccc;
         padding-left: 10px;
+        
 
         &:focus {
             border: 1px solid #FF4F00;
@@ -122,6 +123,7 @@ export const Desconto = styled.div`
 `
 
 export const totais = styled.div`
+
 `;
 
 export const subtotal = styled.div`

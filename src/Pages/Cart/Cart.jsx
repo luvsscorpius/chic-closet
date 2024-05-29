@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import * as C from './Styles'
 import { ShopContext } from '../../Context/ShopContext'
 import { CartItem } from './CartItem'
@@ -9,6 +9,25 @@ import { ArrowLeft } from 'phosphor-react'
 export const Cart = () => {
     const {products, getTotalAmount, cartItems} = useContext(ShopContext)
     const totalAmount = getTotalAmount()
+    const [code, SetCode] = useState('')
+
+    const codes = [
+      {code: 'AND', discount: 0.25},
+      {code: '10OFF', discount: 0.10}
+    ]
+
+    const handleChange = (index) => {
+      
+      // Utilizando o find para encontrar um código de desconto especifico no array de codigos
+      // Primeiro passamos o elemento codig que é o elemento atual que está sendo processado pelo método find ou seja sendo procurado, depois passamos a condição que se codig.code for igual ao que passamos no input ele armazenara isso em cod
+      const cod = codes.find(codig => codig.code === index)
+      // se caso encontrar 
+      if (cod) {
+        // Criara uma nova variável para calcular o desconto aplicado em cima do preço
+        let newTotal = totalAmount - (cod.discount * totalAmount) 
+        SetCode(newTotal.toFixed(2))
+      }
+    }
 
   return (
     <C.Cart>
@@ -46,7 +65,7 @@ export const Cart = () => {
 
             <C.Desconto>
               <p>Desconto</p>
-              <input type="text" placeholder='Código' />
+              <input type="text" placeholder='Código' onChange={(e) => handleChange(e.target.value)} />
             </C.Desconto>
 
             <hr />
@@ -57,7 +76,7 @@ export const Cart = () => {
               </C.subtotal>
 
               <C.total>
-                <h3>Total</h3><h3>R$ {totalAmount}</h3>
+                <h3>Total</h3><h3>R$ {code === '' ? totalAmount : code}</h3>
               </C.total>
 
               <C.buttonContainer>
