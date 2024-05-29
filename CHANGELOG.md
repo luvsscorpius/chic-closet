@@ -1,3 +1,17 @@
+# [1.9.0](https://github.com/luvsscorpius/chic-closet/compare/v1.8.0...v1.9.0) (2024-05-29)
+
+
+### Bug Fixes
+
+* **thead:** adding a thead to cartItem ([d2591cf](https://github.com/luvsscorpius/chic-closet/commit/d2591cf9d39b539c5ce9c44df3543112d9237965))
+
+
+### Features
+
+* **discount:** creating a logic to apply discounts on items ([bee5d31](https://github.com/luvsscorpius/chic-closet/commit/bee5d318fc962a993929876a65a58ac9c43699dc))
+* **maxlenght:** adding maxlenght to cep input ([86d7930](https://github.com/luvsscorpius/chic-closet/commit/86d7930ed4ef4aece66ed2fb2a127df9845c5b1b))
+* **transition:** creating transition when switching among routes ([9cf8363](https://github.com/luvsscorpius/chic-closet/commit/9cf8363ad621e82eac482e1756b3fd2187bfe54a))
+
 # [1.8.0](https://github.com/luvsscorpius/chic-closet/compare/v1.7.4...v1.8.0) (2024-05-26)
 
 
