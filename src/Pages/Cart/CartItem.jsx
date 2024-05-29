@@ -11,12 +11,14 @@ export const CartItem = (props) => {
                 <img src={image} alt={title} />
 
             <C.description>
-                <tr>
-                    <th className='produto'>Produto</th>
-                    <th>Preço</th>
-                    <th>Qtd.</th>
-                    <th>Total</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th className='produto'>Produto</th>
+                        <th>Preço</th>
+                        <th>Qtd.</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
 
                 <tbody>
                     <tr>
