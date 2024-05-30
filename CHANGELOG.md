@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/luvsscorpius/chic-closet/compare/v1.9.0...v1.9.1) (2024-05-30)
+
+
+### Bug Fixes
+
+* **tofixed:** fixing values like total and subTotal ([da71162](https://github.com/luvsscorpius/chic-closet/commit/da7116299f4c1d84bc5e4f12161f84d351763d37))
+
 # [1.9.0](https://github.com/luvsscorpius/chic-closet/compare/v1.8.0...v1.9.0) (2024-05-29)
 
 
