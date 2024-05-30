@@ -29,7 +29,7 @@ export const CartItem = (props) => {
                         <p>{cartItems[id]}</p>
                         <button onClick={() => addToCart(id)}>+</button>
                     </C.countHandler></td>
-                    <td className='total'>R$ {cartItems[id] * price}</td>
+                    <td className='total'>R$ {(cartItems[id] * price).toFixed(2)}</td>
                     </tr>
                 </tbody>
             </C.description>
