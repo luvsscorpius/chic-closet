@@ -110,7 +110,7 @@ export const ContentContainer = styled.div`
 
 export const img = styled.img`
     width: 100%;
-    height: 250px;
+    height: 245px;
     object-fit: contain;
     transition: transform 0.3s ease-in-out;
 
