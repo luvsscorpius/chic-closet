@@ -50,7 +50,7 @@ const containerAnimation = keyframes`
 
 export const Product = styled.div`
     width: 300px;
-    height: 350px;
+    height: 365px;
     margin: 30px;
     display: flex;
     flex-direction: column;
