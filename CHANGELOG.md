@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/luvsscorpius/chic-closet/compare/v1.9.1...v1.10.0) (2024-12-19)
+
+
+### Features
+
+* **frontend:** changing frontend from root to folder called frontend ([d919fe9](https://github.com/luvsscorpius/chic-closet/commit/d919fe9179860cfe778b543427feee9e1c34b122))
+
 ## [1.9.1](https://github.com/luvsscorpius/chic-closet/compare/v1.9.0...v1.9.1) (2024-05-30)
 
 
