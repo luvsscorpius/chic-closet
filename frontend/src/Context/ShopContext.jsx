@@ -62,7 +62,18 @@ export const ShopContextProvider = (props) => {
         return totalAmount.toFixed(2)
     }
 
-    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount };
+    // LoginPage
+    const [userInfo, SetUserInfo] = useState({
+        name: "",
+        password: ""
+    })
+
+    const sendUserInfo = (e) => {
+        e.preventDefault()
+        console.log(userInfo)
+    }
+
+    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
 
     return (
         <ShopContext.Provider value={contextValue}>
