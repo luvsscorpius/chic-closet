@@ -161,6 +161,11 @@ export const buttonContainer = styled.div`
         color: #fff;
         font-weight: bold;
         cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+            transition: 0.9s ease-in-out;
+        }
     }
 `
 
