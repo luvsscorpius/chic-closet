@@ -39,6 +39,7 @@ export const Links = styled.div`
         color: rgba(255, 255, 255, 1);
         margin-left: 20px;
         font-size: 25px;
+        font-weight: bold;
     }
 `
 

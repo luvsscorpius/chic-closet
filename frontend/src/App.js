@@ -6,6 +6,7 @@ import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
 import { ShopContextProvider } from "./Context/ShopContext";
+import { Login } from "./Pages/Login/Login";
 
 function App() {
   // Resolvendo o problema de não atualizar o contexto toda vez que mudar de rota
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
         <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
+        <Route path="/login" element={<FadeOutContainer><Login/></FadeOutContainer>}/>
       </Routes>
       <Footer />
     </ShopContextProvider>
