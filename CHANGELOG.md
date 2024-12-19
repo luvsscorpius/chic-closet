@@ -1,3 +1,12 @@
+# [1.11.0](https://github.com/luvsscorpius/chic-closet/compare/v1.10.0...v1.11.0) (2024-12-19)
+
+
+### Features
+
+* **loginpage:** creating and styling loginPage ([ebe57e5](https://github.com/luvsscorpius/chic-closet/commit/ebe57e5469aeb7b6d82f922503c9b83ca27796c4))
+* **loginpage:** creating loginPage folder and files ([3ffc706](https://github.com/luvsscorpius/chic-closet/commit/3ffc7062ae5316f98f6f51e46ccf37e8b7971e43))
+* **loginpage:** creating state userInfo and function to sendInfo ([4be5b4e](https://github.com/luvsscorpius/chic-closet/commit/4be5b4e7219109030427a42c101bc37915d0670e))
+
 # [1.10.0](https://github.com/luvsscorpius/chic-closet/compare/v1.9.1...v1.10.0) (2024-12-19)
 
 
