@@ -72,6 +72,11 @@ export const ShopContextProvider = (props) => {
         e.preventDefault()
         console.log(userInfo)
         
+        const response = await axios.post('http://localhost:2000/login', userInfo, {
+            headers: {'Content-Type': 'application/json'}
+        })
+
+        console.log(response)
     }
 
     const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
