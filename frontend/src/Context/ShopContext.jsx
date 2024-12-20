@@ -68,9 +68,10 @@ export const ShopContextProvider = (props) => {
         password: ""
     })
 
-    const sendUserInfo = (e) => {
+    const sendUserInfo = async (e) => {
         e.preventDefault()
         console.log(userInfo)
+        
     }
 
     const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
