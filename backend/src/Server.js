@@ -4,6 +4,7 @@ const port = 2000
 const cors = require('cors')
 
 app.use(cors())
+app.use(express.json())
 
 //importando rotas
 const indexRoute = require('./Routes/index.route')
