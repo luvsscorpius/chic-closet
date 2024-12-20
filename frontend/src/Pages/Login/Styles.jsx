@@ -61,6 +61,7 @@ export const formContainer = styled.div`
             height: 35px;
             border: 1px solid #ccc;
             padding-left: 10px;
+            font-size: 18px;
 
             &:focus {
                 border: 1px solid #FF4F00;
