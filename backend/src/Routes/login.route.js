@@ -16,18 +16,25 @@ router.post("/", async (req, res) => {
 
         // Procurando um usuário de acordo com o nome passado na requisicao
         const user = await collection.findOne({user: userLoginInfo.name})
+
+        if (!user) {
+            console.log("Usuário não encontrado")
+            return res.status(404).send("Usuário não encotrado")
+        }
+
         const isCorrectPassword = user.password === userLoginInfo.password ? true : false
+
+        if (isCorrectPassword === false) {
+            console.log('Senha incorreta')
+            return res.status(403).send('Senha incorreta    ')
+        }
 
         // Verificando se com o usuário encontrado a senha eh a mesma do backend
         if (user && isCorrectPassword === true) {
             console.log('Encontrei')
             const token = jwt.sign({name: user.user}, secretKey, {expiresIn: '1min'})
-            return res.json(token).status(200)
-        } else {
-            console.log('Não encontrado')
-            return res.status(401).send('Credenciais incorretas')
-        }
-
+            return res.status(200).json({token})
+        } 
     } catch (err) {
         console.error(err)
     }

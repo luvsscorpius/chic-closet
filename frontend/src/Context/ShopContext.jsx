@@ -16,7 +16,7 @@ export const ShopContextProvider = (props) => {
 
     // Usando o useEffect para montar o carrinho com base no localStorage
     useEffect(() => {
-    // Aqui adicionamos o carrinho ao localStorage
+        // Aqui adicionamos o carrinho ao localStorage
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 
@@ -35,15 +35,15 @@ export const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => {
             // Verificando se a contagem comeca com 0 para nao dar problema de comecar com null e NaN
-                const currentCount = prev[itemId] || 0
-                return { ...prev, [itemId]: currentCount + 1 };
+            const currentCount = prev[itemId] || 0
+            return { ...prev, [itemId]: currentCount + 1 };
         });
     };
 
     // Funçao para remover do carrinho
     const removeFromCart = (itemId) => {
         setCartItems((prev) => {
-            return {...prev, [itemId]: prev[itemId] - 1}
+            return { ...prev, [itemId]: prev[itemId] - 1 }
         })
     }
 
@@ -54,9 +54,9 @@ export const ShopContextProvider = (props) => {
             if (cartItems[item] > 0) {
                 let itemInfo = products.find((product) => product.id === Number(item))
                 // Colocando esse if ajuda a tirar o bug de nao achar o preco, por isso o if se realmente achar o itemInfo ele adicionara o preco
-                 if (itemInfo) {
+                if (itemInfo) {
                     totalAmount += cartItems[item] * itemInfo.price
-                 }
+                }
             }
         }
         return totalAmount.toFixed(2)
@@ -71,12 +71,26 @@ export const ShopContextProvider = (props) => {
     const sendUserInfo = async (e) => {
         e.preventDefault()
         console.log(userInfo)
-        
-        const response = await axios.post('http://localhost:2000/login', userInfo, {
-            headers: {'Content-Type': 'application/json'}
-        })
 
-        console.log(response)
+        try {
+            const response = await axios.post('http://localhost:2000/login', userInfo, {
+                headers: { 'Content-Type': 'application/json' }
+            })
+
+            if (response.status === 200) {
+                console.log('Entrei')
+            } 
+
+        } catch (err) {
+            console.error(err)
+            if (err.response.status === 401) {
+                alert('Crendenciais invalidas.')
+            } else if (err.response.status === 404) {
+                alert('Usuário não encontrado')
+            } else if (err.response.status === 403) {
+                alert('Senha incorreta')
+            }
+        }
     }
 
     const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
