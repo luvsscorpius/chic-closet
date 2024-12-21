@@ -7,6 +7,7 @@ import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
 import { ShopContextProvider } from "./Context/ShopContext";
 import { Login } from "./Pages/Login/Login";
+import { Adm } from "./Pages/Adm/Adm";
 
 function App() {
   // Resolvendo o problema de não atualizar o contexto toda vez que mudar de rota
@@ -29,19 +30,11 @@ function App() {
         <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
         <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
         <Route path="/login" element={<FadeOutContainer><Login/></FadeOutContainer>}/>
+        <Route path="/adm" element={<FadeOutContainer><Adm/></FadeOutContainer>}/>
       </Routes>
       <Footer />
     </ShopContextProvider>
   );
 }
 
-// Componente AppWraper envolve o App com o router para garantir que o roteador esteja disponível para o useLocation no app.
-function AppWrapper() {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-}
-
-export default AppWrapper;
+export default App

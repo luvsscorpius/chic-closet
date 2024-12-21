@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ShopContext } from '../../Context/ShopContext'
 
 export const Adm = () => {
+    const {userInfo, SetUserInfo} = useContext(ShopContext)
+    console.log(userInfo)
+
   return (
-    <div>Adm</div>
+    <div>Olá {userInfo.name}</div>
   )
 }

@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 // Isso irá rastrear todas as funções e states da nossa aplicação, por exemplo, um state que pode ser acessado de páginas como shop e cart
 export const ShopContext = createContext(null);
@@ -68,6 +69,8 @@ export const ShopContextProvider = (props) => {
         password: ""
     })
 
+    const navigate = useNavigate()
+
     const sendUserInfo = async (e) => {
         e.preventDefault()
         console.log(userInfo)
@@ -79,6 +82,7 @@ export const ShopContextProvider = (props) => {
 
             if (response.status === 200) {
                 console.log('Entrei')
+                navigate('adm')
                 console.log(response)
             } 
 
