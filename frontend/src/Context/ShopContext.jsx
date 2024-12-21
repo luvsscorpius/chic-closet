@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import CryptoJS from 'crypto-js'
 
 // Isso irá rastrear todas as funções e states da nossa aplicação, por exemplo, um state que pode ser acessado de páginas como shop e cart
 export const ShopContext = createContext(null);
@@ -64,10 +65,43 @@ export const ShopContextProvider = (props) => {
     }
 
     // LoginPage
-    const [userInfo, SetUserInfo] = useState(() => {
-        const savedUserInfo = localStorage.getItem("@userInfo");
-        return savedUserInfo ? JSON.parse(savedUserInfo) : {id: "", email: "", password: "", role: "", user: ""}
+    const [userInfo, SetUserInfo] = useState({
+        id: "", email: "", password: "", role: "", user: ""
     })
+
+    // Função para criptografar dados
+    const encryptData = (data, secretKey) => {
+        const stringData = JSON.stringify(data) // transforma o array em uma string
+        return CryptoJS.AES.encrypt(stringData, secretKey).toString()
+    }
+
+    // Função para criar um cookie com dados criptografados
+    const setEncryptedCookie = (name, data, secretKey, days) => {
+        const encryptedData = encryptData(data, secretKey)
+        const date = new Date()
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)) // Definir a data de expiração do cookie
+
+        // Criando o cookie com a opção HttpOnly e Secure
+        document.cookie = `${name}=${encryptedData}; expires=${date.toUTCString()}; path=/; secure; SameSite=Strict`
+    }
+
+    // Função para descriptografar e ler o cookie
+    const decryptData = (encryptedData, secretKey) => {
+        const bytes = CryptoJS.AES.decrypt(encryptedData, secretKey)
+        return bytes.toString(CryptoJS.enc.Utf8)
+    }
+
+    const getDecryptData = (name, secretKey) => {
+        const value = `; ${document.cookie}`
+        const parts = value.split(`; ${name}=`)
+        if (parts.length === 2) {
+            const encryptedData = parts.pop().split(';').shift()
+            return decryptData(encryptedData, secretKey)
+        }
+        return null
+    }
+
+    const secretKey = 'minhasenha'
 
     const navigate = useNavigate()
 
@@ -82,7 +116,15 @@ export const ShopContextProvider = (props) => {
 
             if (response.status === 200) {
                 console.log('Entrei')
-                localStorage.setItem("@userInfo", JSON.stringify(response.data.user))
+                
+                // Exemplo de uso cookie
+                const token = response.data.token
+                setEncryptedCookie('@authToken', token, secretKey, 1)
+
+                // Criptografando as informações do usuário
+                const userInfo = response.data.user
+                setEncryptedCookie('@authUser', userInfo, secretKey, 1)
+
                 navigate('adm')
                 console.log(response)
             } 
@@ -98,6 +140,18 @@ export const ShopContextProvider = (props) => {
             }
         }
     }
+
+    // Função para setar as informações do usuário
+    const setUserInfoFromCookies = () => {
+        const decryptedUserInfo = getDecryptData('@authUser', secretKey)
+        if (decryptedUserInfo) {
+            SetUserInfo(JSON.parse(decryptedUserInfo))
+        }
+    }
+
+    useEffect(() => {
+        setUserInfoFromCookies()
+    }, [])
 
     const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
 
