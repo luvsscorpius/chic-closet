@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 
         if (isCorrectPassword === false) {
             console.log('Senha incorreta')
-            return res.status(403).send('Senha incorreta    ')
+            return res.status(403).send('Senha incorreta')
         }
 
         // Verificando se com o usuário encontrado a senha eh a mesma do backend

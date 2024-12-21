@@ -79,6 +79,7 @@ export const ShopContextProvider = (props) => {
 
             if (response.status === 200) {
                 console.log('Entrei')
+                console.log(response)
             } 
 
         } catch (err) {
