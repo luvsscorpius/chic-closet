@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
         if (user && isCorrectPassword === true) {
             console.log('Encontrei')
             const token = jwt.sign({name: user.user}, secretKey, {expiresIn: '1min'})
-            return res.status(200).json({token})
+            return res.status(200).json({token, user})
         } 
     } catch (err) {
         console.error(err)

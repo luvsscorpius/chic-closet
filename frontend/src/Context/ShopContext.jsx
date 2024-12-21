@@ -64,9 +64,9 @@ export const ShopContextProvider = (props) => {
     }
 
     // LoginPage
-    const [userInfo, SetUserInfo] = useState({
-        name: "",
-        password: ""
+    const [userInfo, SetUserInfo] = useState(() => {
+        const savedUserInfo = localStorage.getItem("@userInfo");
+        return savedUserInfo ? JSON.parse(savedUserInfo) : {id: "", email: "", password: "", role: "", user: ""}
     })
 
     const navigate = useNavigate()
@@ -82,6 +82,7 @@ export const ShopContextProvider = (props) => {
 
             if (response.status === 200) {
                 console.log('Entrei')
+                localStorage.setItem("@userInfo", JSON.stringify(response.data.user))
                 navigate('adm')
                 console.log(response)
             } 

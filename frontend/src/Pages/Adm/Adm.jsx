@@ -6,6 +6,6 @@ export const Adm = () => {
     console.log(userInfo)
 
   return (
-    <div>Olá {userInfo.name}</div>
+    <div>Olá {userInfo.user}</div>
   )
 }
