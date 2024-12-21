@@ -69,6 +69,9 @@ export const ShopContextProvider = (props) => {
         id: "", email: "", password: "", role: "", user: ""
     })
 
+    // SecretKey 
+    const secretKey = process.env.REACT_APP_SECRET_KEY;
+
     // Função para criptografar dados
     const encryptData = (data, secretKey) => {
         const stringData = JSON.stringify(data) // transforma o array em uma string
@@ -100,8 +103,6 @@ export const ShopContextProvider = (props) => {
         }
         return null
     }
-
-    const secretKey = 'minhasenha'
 
     const navigate = useNavigate()
 

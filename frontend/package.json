@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.9",
     "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
     "phosphor": "^0.7.1",
     "phosphor-react": "^1.4.1",
     "react": "^18.3.1",
