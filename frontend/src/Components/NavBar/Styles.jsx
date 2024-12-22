@@ -19,7 +19,7 @@ export const NavBar = styled.div`
     width: 100%;
     height: 80px;
     background-color: rgba(0, 0, 0, 0.8);
-    color: rgba(255, 255, 255, 1);
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
