@@ -1,3 +1,12 @@
+# [1.13.0](https://github.com/luvsscorpius/chic-closet/compare/v1.12.0...v1.13.0) (2024-12-22)
+
+
+### Features
+
+* **cookiepopup:** creating and developing cookiePopUp ([12c67c6](https://github.com/luvsscorpius/chic-closet/commit/12c67c6bd6d4be0ff28f474814d40ec510211614))
+* **cookiepopup:** developing a logic to set an animation moveToRight on popupContainer ([c1c37ff](https://github.com/luvsscorpius/chic-closet/commit/c1c37ff5f53047ffc770c977be9c49551b970fe6))
+* **cookiepopup:** developing logic to save cookies on cookies or sessionStorage ([4d7ff3e](https://github.com/luvsscorpius/chic-closet/commit/4d7ff3e6ea659100e8630859198ba046f337731c))
+
 # [1.12.0](https://github.com/luvsscorpius/chic-closet/compare/v1.11.0...v1.12.0) (2024-12-22)
 
 
