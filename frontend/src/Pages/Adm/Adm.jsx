@@ -4,6 +4,11 @@ import * as A from './Styles'
 import { Admin, AppBar, Layout, Resource } from 'react-admin'
 import { ProductList } from '../../Components/ProductList/ProductList'
 import { styled } from '@mui/material/styles';
+import jsonServerProvider from 'ra-data-json-server'
+
+const dataProvider = jsonServerProvider('http://localhost:2000')
+
+console.log(dataProvider)
 
 export const Adm = () => {
   const { userInfo, SetUserInfo } = useContext(ShopContext)
@@ -29,8 +34,8 @@ export const Adm = () => {
 
   return (
     <A.mainContainer>
-      <Admin basename='/adm' layout={CustomLayout}>
-        <Resource name='Produtos' list={ProductList} />
+      <Admin basename='/adm' layout={CustomLayout} dataProvider={dataProvider}>
+        <Resource name='produtos' list={ProductList} />
       </Admin>
     </A.mainContainer>
   )
