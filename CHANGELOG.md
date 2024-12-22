@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/luvsscorpius/chic-closet/compare/v1.13.0...v1.14.0) (2024-12-22)
+
+
+### Features
+
+* **main:** installing react admin ([c64e3e5](https://github.com/luvsscorpius/chic-closet/commit/c64e3e5c3c5ceef7b0dcb66c7eb1f61dd111e50e))
+
 # [1.13.0](https://github.com/luvsscorpius/chic-closet/compare/v1.12.0...v1.13.0) (2024-12-22)
 
 
