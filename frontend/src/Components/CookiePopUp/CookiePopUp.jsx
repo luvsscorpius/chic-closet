@@ -3,6 +3,8 @@ import * as C from './Styles'
 
 export const CookiePopUp = () => {
     const [isVisible, setIsVisible] = useState(false)
+    // state para colocar uma classe no popupcontainer
+    const [animation, setAnimation] = useState("")
 
     useEffect(() => {
         const acceptedCookies = sessionStorage.getItem('acceptedCookies')
@@ -12,12 +14,14 @@ export const CookiePopUp = () => {
     }, [])
 
     const handleAccept = () => {
+        setAnimation("moveToRight")
         sessionStorage.setItem('acceptedCookies', true)
-        setIsVisible(false)
+        setTimeout(() => setIsVisible(false), 2000) 
     }
 
     const handleDecline = () => {
-        setIsVisible(false)
+        setAnimation("moveToRight")
+        setTimeout(() => setIsVisible(false), 2000) 
     }
 
     if (!isVisible) {
@@ -25,7 +29,7 @@ export const CookiePopUp = () => {
     }
 
   return (
-    <C.PopUpContainer>
+    <C.PopUpContainer className={animation}>
         <div className="h1Container">
             <h3>Cookies policies</h3>
         </div>

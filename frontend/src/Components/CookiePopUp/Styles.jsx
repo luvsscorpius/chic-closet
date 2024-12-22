@@ -10,6 +10,16 @@ export const containerAnimation = keyframes`
     }
 `
 
+// Animação para mover o popup para o lado direito
+export const moveToRight = keyframes`
+    0% {
+        transform: translateX(0px)
+    } 
+    100% {
+        transform: translateX(400px)
+    }
+`
+
 export const PopUpContainer = styled.div`
     position: fixed;
     bottom: 20px;
@@ -21,6 +31,11 @@ export const PopUpContainer = styled.div`
     border-radius: 10px;
     z-index: 1000;
     animation: ${containerAnimation} 300ms ease-in;
+    animation-delay: 100ms;
+
+    &.moveToRight {
+        animation: ${moveToRight} 2s ease-in-out;
+    }
 
     .buttonsDiv {
         padding-left: 10px;
