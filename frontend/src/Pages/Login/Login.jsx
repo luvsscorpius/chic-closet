@@ -6,6 +6,8 @@ import { ShopContext } from '../../Context/ShopContext'
 export const Login = () => {
     const {userInfo, SetUserInfo, sendUserInfo} = useContext(ShopContext)
 
+    console.log(userInfo)
+
     return (
         <L.mainContent>
             <L.formContainer>
@@ -18,7 +20,7 @@ export const Login = () => {
 
                     <div className="inputContainer">
                         <label htmlFor="user">Usuário</label>
-                        <input type="text" name='user' value={userInfo.name} onChange={(e) => SetUserInfo({name: e.target.value})} />
+                        <input type="text" name='user' value={userInfo.user} onChange={(e) => SetUserInfo({name: e.target.value})} />
                     </div>
 
                     <div className="inputContainer">
