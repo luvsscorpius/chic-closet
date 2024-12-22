@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
         const collection = await db.collection('usuarios')
 
         // Procurando um usuário de acordo com o nome passado na requisicao
-        const user = await collection.findOne({user: userLoginInfo.name})
+        const user = await collection.findOne({user: userLoginInfo.user})
 
         if (!user) {
             console.log("Usuário não encontrado")

@@ -6,6 +6,8 @@ import { ShopContext } from '../../Context/ShopContext'
 export const Login = () => {
     const {userInfo, SetUserInfo, sendUserInfo} = useContext(ShopContext)
 
+    console.log(userInfo)
+
     return (
         <L.mainContent>
             <L.formContainer>
