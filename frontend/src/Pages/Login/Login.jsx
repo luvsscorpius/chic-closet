@@ -20,7 +20,7 @@ export const Login = () => {
 
                     <div className="inputContainer">
                         <label htmlFor="user">Usuário</label>
-                        <input type="text" name='user' value={userInfo.user} onChange={(e) => SetUserInfo({name: e.target.value})} />
+                        <input type="text" name='user' value={userInfo.user} onChange={(e) => SetUserInfo({user: e.target.value})} />
                     </div>
 
                     <div className="inputContainer">

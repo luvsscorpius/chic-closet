@@ -106,29 +106,39 @@ export const ShopContextProvider = (props) => {
 
     const navigate = useNavigate()
 
+    // Cookies
+    const [acceptedCookies, setAcceptedCookies] = useState(() => {
+        const saved = sessionStorage.getItem('acceptedCookies');
+        return saved ? JSON.parse(saved) : false
+    })
+
     const sendUserInfo = async (e) => {
         e.preventDefault()
-        console.log(userInfo)
 
         try {
             const response = await axios.post('http://localhost:2000/login', userInfo, {
                 headers: { 'Content-Type': 'application/json' }
             })
 
-            if (response.status === 200) {
-                console.log('Entrei')
-                
+            const token = response.data.token
+            const resUserInfo = response.data.user
+
+            console.log(acceptedCookies)
+
+            if (acceptedCookies === true) {
                 // Exemplo de uso cookie
-                const token = response.data.token
                 setEncryptedCookie('@authToken', token, secretKey, 1)
 
                 // Criptografando as informações do usuário
-                const userInfo = response.data.user
-                setEncryptedCookie('@authUser', userInfo, secretKey, 1)
+                setEncryptedCookie('@authUser', resUserInfo, secretKey, 1)
 
                 navigate('adm')
-                console.log(response)
-            } 
+            } else if (acceptedCookies === false) {
+                sessionStorage.setItem("@authToken", token)
+                sessionStorage.setItem("@authUser", JSON.stringify(resUserInfo))
+                navigate('adm')
+            }
+
 
         } catch (err) {
             console.error(err)

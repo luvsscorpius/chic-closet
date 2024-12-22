@@ -21,6 +21,7 @@ export const CookiePopUp = () => {
 
     const handleDecline = () => {
         setAnimation("moveToRight")
+        sessionStorage.setItem('acceptedCookies', false)
         setTimeout(() => setIsVisible(false), 2000) 
     }
 
