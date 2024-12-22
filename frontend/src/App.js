@@ -8,6 +8,7 @@ import { Footer } from "./Components/Footer/Footer";
 import { ShopContextProvider } from "./Context/ShopContext";
 import { Login } from "./Pages/Login/Login";
 import { Adm } from "./Pages/Adm/Adm";
+import { CookiePopUp } from "./Components/CookiePopUp/CookiePopUp";
 
 function App() {
   // Resolvendo o problema de não atualizar o contexto toda vez que mudar de rota
@@ -26,6 +27,7 @@ function App() {
     <ShopContextProvider key={contextKey}>
       <GlobalStyle /> {/* Resetando o css */}
       <NavBar />
+      <CookiePopUp/>
       <Routes>
         <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
         <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
