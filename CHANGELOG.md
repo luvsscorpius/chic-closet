@@ -1,3 +1,28 @@
+# [1.12.0](https://github.com/luvsscorpius/chic-closet/compare/v1.11.0...v1.12.0) (2024-12-22)
+
+
+### Bug Fixes
+
+* **backend:** changing userLoginInfo.name to .user ([a7989c9](https://github.com/luvsscorpius/chic-closet/commit/a7989c91b969b69fc501a1c8db60b16448185e23))
+* **backend:** login.route adding require ([efc91e1](https://github.com/luvsscorpius/chic-closet/commit/efc91e1aca0e8e7c8cfa8d2ad72cb003f1294c5c))
+* **backend:** using app.use(express.json()) to fix bug of undefined ([cff347c](https://github.com/luvsscorpius/chic-closet/commit/cff347cae38e699eda17f4ea46eddd3590e611f0))
+* **frontend:** adding userInfo to localStorage ([cfb8dbd](https://github.com/luvsscorpius/chic-closet/commit/cfb8dbd6d8c3a3525f68f4563d55315ea292d776))
+* **frontend:** using router on index.js to wrap all app ([77e9cb8](https://github.com/luvsscorpius/chic-closet/commit/77e9cb80a8aa2d3edaa16b9f217b0f594cd5ff86))
+
+
+### Features
+
+* **backend:** creating backend folder and files ([15f75fc](https://github.com/luvsscorpius/chic-closet/commit/15f75fcd38dd56c904ffdb6dd9ef3855aad8f2a0))
+* **backend:** creating config folder and db.js file ([9d3b4e9](https://github.com/luvsscorpius/chic-closet/commit/9d3b4e994f988845f3945ba94e3564d0a85231e9))
+* **backend:** creating indexRoute ([2804315](https://github.com/luvsscorpius/chic-closet/commit/28043153e9e8bffaad24336fb1242faba7d023b2))
+* **backend:** creating loginRoute ([4204e36](https://github.com/luvsscorpius/chic-closet/commit/4204e36f47183b32e8c5cf54ad4f6ea029591329))
+* **backend:** installing cors ([55c25fe](https://github.com/luvsscorpius/chic-closet/commit/55c25fe78da0286fc313c20fc88e82093799cb59))
+* **backend:** login.route - using if to check if there is a user & checking if the pass is correct ([f549649](https://github.com/luvsscorpius/chic-closet/commit/f5496498521fae02c6b96b5efc7ccdb076ea0b76))
+* **backend:** login.route installing jwt ([99aee9a](https://github.com/luvsscorpius/chic-closet/commit/99aee9a58200d0db9dd5cd4859e0406455528e8b))
+* **frontend:** creating .env to put secretkey ([6233714](https://github.com/luvsscorpius/chic-closet/commit/62337142570cb827cfef5e741014479a7d2530f9))
+* **frontend:** creating adm folder and files ([5bde7cc](https://github.com/luvsscorpius/chic-closet/commit/5bde7cc278f5be7d1dc1c72a4c288e4758e4b7ad))
+* **frontend:** using cookies to save the data without using localstorage ([ac8052e](https://github.com/luvsscorpius/chic-closet/commit/ac8052e5af9f9d9834547ff98889d5f0af652de8))
+
 # [1.11.0](https://github.com/luvsscorpius/chic-closet/compare/v1.10.0...v1.11.0) (2024-12-19)
 
 
