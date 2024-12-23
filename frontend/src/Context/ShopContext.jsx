@@ -64,11 +64,6 @@ export const ShopContextProvider = (props) => {
         return totalAmount.toFixed(2)
     }
 
-    // LoginPage
-    const [userInfo, SetUserInfo] = useState({
-        id: "", email: "", password: "", role: "", user: ""
-    })
-
     // SecretKey 
     const secretKey = process.env.REACT_APP_SECRET_KEY;
 
@@ -112,59 +107,7 @@ export const ShopContextProvider = (props) => {
         return saved ? JSON.parse(saved) : false
     })
 
-    const sendUserInfo = async (e) => {
-        e.preventDefault()
-
-        try {
-            const response = await axios.post('http://localhost:2000/login', userInfo, {
-                headers: { 'Content-Type': 'application/json' }
-            })
-
-            const token = response.data.token
-            const resUserInfo = response.data.user
-
-            console.log(acceptedCookies)
-
-            if (acceptedCookies === true) {
-                // Exemplo de uso cookie
-                setEncryptedCookie('@authToken', token, secretKey, 1)
-
-                // Criptografando as informações do usuário
-                setEncryptedCookie('@authUser', resUserInfo, secretKey, 1)
-
-                navigate('adm')
-            } else if (acceptedCookies === false) {
-                sessionStorage.setItem("@authToken", token)
-                sessionStorage.setItem("@authUser", JSON.stringify(resUserInfo))
-                navigate('adm')
-            }
-
-
-        } catch (err) {
-            console.error(err)
-            if (err.response.status === 401) {
-                alert('Crendenciais invalidas.')
-            } else if (err.response.status === 404) {
-                alert('Usuário não encontrado')
-            } else if (err.response.status === 403) {
-                alert('Senha incorreta')
-            }
-        }
-    }
-
-    // Função para setar as informações do usuário
-    const setUserInfoFromCookies = () => {
-        const decryptedUserInfo = getDecryptData('@authUser', secretKey)
-        if (decryptedUserInfo) {
-            SetUserInfo(JSON.parse(decryptedUserInfo))
-        }
-    }
-
-    useEffect(() => {
-        setUserInfoFromCookies()
-    }, [])
-
-    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount, userInfo, SetUserInfo, sendUserInfo };
+    const contextValue = { cartItems, addToCart, products, removeFromCart, getTotalAmount};
 
     return (
         <ShopContext.Provider value={contextValue}>

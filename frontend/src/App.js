@@ -6,8 +6,6 @@ import { Shop } from "./Pages/Shop/Shop";
 import { Cart } from "./Pages/Cart/Cart";
 import { Footer } from "./Components/Footer/Footer";
 import { ShopContextProvider } from "./Context/ShopContext";
-import { Login } from "./Pages/Login/Login";
-import { Adm } from "./Pages/Adm/Adm";
 import { CookiePopUp } from "./Components/CookiePopUp/CookiePopUp";
 
 function App() {
@@ -31,8 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
         <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
-        <Route path="/login" element={<FadeOutContainer><Login/></FadeOutContainer>}/>
-        <Route path="/adm" element={<FadeOutContainer><Adm/></FadeOutContainer>}/>
       </Routes>
       <Footer />
     </ShopContextProvider>
