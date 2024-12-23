@@ -8,7 +8,7 @@ export const ProductCreate = (props) => {
                 <TextInput source='nome' label='Nome do produto' />
                 <TextInput source='preco' label='Preço do produto' />
                 <TextInput source='categoria' label='Categoria do produto' />
-                <ImageInput source="image" label="Image" accept="image/*">
+                <ImageInput source="imagem" label="Imagem" accept="image/*">
                     <ImageField source="src" title="title" />
                 </ImageInput>
             </SimpleForm>
