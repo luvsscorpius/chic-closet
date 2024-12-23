@@ -5,6 +5,7 @@ import { Admin, AppBar, Layout, Resource } from 'react-admin'
 import { ProductList } from '../../Components/ProductList/ProductList'
 import { styled } from '@mui/material/styles';
 import jsonServerProvider from 'ra-data-json-server'
+import { ProductCreate } from '../../Components/ProductCreate/ProductCreate'
 
 const dataProvider = jsonServerProvider('http://localhost:2000')
 
@@ -35,7 +36,7 @@ export const Adm = () => {
   return (
     <A.mainContainer>
       <Admin basename='/adm' layout={CustomLayout} dataProvider={dataProvider}>
-        <Resource name='produtos' list={ProductList} />
+        <Resource name='produtos' list={ProductList} create={ProductCreate} />
       </Admin>
     </A.mainContainer>
   )

@@ -7,6 +7,7 @@ export const ProductList = (props) => {
       <Datagrid>
         <TextField source='_id' label='ID'/>
         <TextField source='nome' label='Nome'/>
+        <TextField source='categoria' label='Categoria'/>
         <TextField source='preco' label='Preço'/>
       </Datagrid>
     </List>
