@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/luvsscorpius/chic-closet/compare/v1.14.0...v1.15.0) (2024-12-23)
+
+
+### Features
+
+* **revert:** reverting ([1ac4e5d](https://github.com/luvsscorpius/chic-closet/commit/1ac4e5d63fe3fdad2ab28d1a03a188d049dc6887))
+
 # [1.14.0](https://github.com/luvsscorpius/chic-closet/compare/v1.13.0...v1.14.0) (2024-12-22)
 
 
