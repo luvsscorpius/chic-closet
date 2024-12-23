@@ -1,3 +1,13 @@
+# [1.15.0](https://github.com/luvsscorpius/chic-closet/compare/v1.14.0...v1.15.0) (2024-12-23)
+
+
+### Features
+
+* **admin:** creating logic to implement products to dataBase ([70a7dec](https://github.com/luvsscorpius/chic-closet/commit/70a7dec85dbd60a6fd22ea6554a3f5c973e9baab))
+* **admin:** getting product data from backend ([13183b9](https://github.com/luvsscorpius/chic-closet/commit/13183b9eb65fb05aa2b2e3202ba1bd2bbd8bc89f))
+* **admin:** impleting react admin ([d7cdb1d](https://github.com/luvsscorpius/chic-closet/commit/d7cdb1d3b960eca620f025bde11ee0d38624767e))
+* **react admin:** uninstalling react admin ([a91f280](https://github.com/luvsscorpius/chic-closet/commit/a91f280a67a0d6a3ce0afd8b0ebde4a7a791ed9e))
+
 # [1.14.0](https://github.com/luvsscorpius/chic-closet/compare/v1.13.0...v1.14.0) (2024-12-22)
 
 
