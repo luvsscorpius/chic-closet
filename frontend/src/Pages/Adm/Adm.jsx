@@ -1,15 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
-import {Admin, Resource} from 'react-admin'
-import { dataProvider } from './DataProvider'
+import * as A from './Styles'
+import { ProductList } from '../../Components/ProductList/ProductList'
+import { styled } from '@mui/material/styles';
+import { ProductCreate } from '../../Components/ProductCreate/ProductCreate'
 
 export const Adm = () => {
-    const {userInfo, SetUserInfo} = useContext(ShopContext)
-    console.log(userInfo)
+  const { userInfo, SetUserInfo } = useContext(ShopContext)
+  console.log(userInfo)
 
   return (
-    <Admin>
-      
-    </Admin>
+    <A.mainContainer>
+      teste
+    </A.mainContainer>
   )
 }

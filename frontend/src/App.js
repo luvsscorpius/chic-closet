@@ -32,7 +32,7 @@ function App() {
         <Route path="/" element={<FadeInContainer><Shop /> </FadeInContainer>} />
         <Route path="/cart" element={<FadeOutContainer><Cart /></FadeOutContainer>} />
         <Route path="/login" element={<FadeOutContainer><Login/></FadeOutContainer>}/>
-        <Route path="/adm" element={<FadeOutContainer><Adm/></FadeOutContainer>}/>
+        <Route path="/adm/*" element={<FadeOutContainer><Adm/></FadeOutContainer>}/>
       </Routes>
       <Footer />
     </ShopContextProvider>

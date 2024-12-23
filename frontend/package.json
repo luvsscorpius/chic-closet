@@ -4,6 +4,10 @@
   "homepage": "http://luvsscorpius.github.io/chic-closet",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.2.1",
+    "@mui/material": "^6.2.1",
     "@react-oauth/google": "^0.12.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -15,7 +19,6 @@
     "phosphor-react": "^1.4.1",
     "ra-data-json-server": "^5.4.3",
     "react": "^18.3.1",
-    "react-admin": "^5.4.3",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
